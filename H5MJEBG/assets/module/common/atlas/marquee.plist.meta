@@ -1,0 +1,34 @@
+{
+  "ver": "1.2.4",
+  "uuid": "585fcd6d-c1d9-4bc6-b12a-c8f89bd4847b",
+  "rawTextureUuid": "007060fb-ba76-421e-9629-6b9c74ba8be9",
+  "size": {
+    "width": 1337,
+    "height": 78
+  },
+  "type": "Texture Packer",
+  "subMetas": {
+    "marquee.png": {
+      "ver": "1.0.3",
+      "uuid": "666d7c90-e1d1-489a-9f2d-850984004c64",
+      "rawTextureUuid": "007060fb-ba76-421e-9629-6b9c74ba8be9",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 2,
+      "offsetY": 1,
+      "trimX": 1,
+      "trimY": 1,
+      "width": 1335,
+      "height": 76,
+      "rawWidth": 1339,
+      "rawHeight": 82,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "spriteType": "normal",
+      "subMetas": {}
+    }
+  }
+}

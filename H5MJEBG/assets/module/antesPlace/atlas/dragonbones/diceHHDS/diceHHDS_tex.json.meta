@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "e0f02ef2-87c1-436b-aa72-0cc0463481bd",
+  "atlasJson": "{\"width\":1024,\"imagePath\":\"diceHHDS_tex.png\",\"name\":\"diceHHDS\",\"SubTexture\":[{\"frameY\":0,\"y\":1546,\"frameWidth\":305,\"frameHeight\":325,\"width\":302,\"height\":325,\"name\":\"夕陽\",\"frameX\":-2,\"x\":1},{\"frameY\":-25,\"y\":1546,\"frameWidth\":360,\"frameHeight\":339,\"width\":309,\"height\":306,\"name\":\"身\",\"frameX\":-21,\"x\":305},{\"width\":360,\"y\":1205,\"height\":339,\"name\":\"xxsxxsxsxsx\",\"x\":1},{\"width\":800,\"y\":1,\"height\":600,\"name\":\"sssa\",\"x\":1},{\"width\":79,\"y\":1873,\"height\":84,\"name\":\"6\",\"x\":153},{\"width\":46,\"y\":1959,\"height\":50,\"name\":\"1\",\"x\":153},{\"width\":69,\"y\":1873,\"height\":77,\"name\":\"3\",\"x\":234},{\"width\":54,\"y\":1952,\"height\":60,\"name\":\"4\",\"x\":234},{\"frameY\":0,\"y\":1854,\"frameWidth\":305,\"frameHeight\":85,\"width\":302,\"height\":85,\"name\":\"我方骰盅-03\",\"frameX\":-2,\"x\":305},{\"width\":800,\"y\":603,\"height\":600,\"name\":\"手\",\"x\":1},{\"width\":150,\"y\":1873,\"height\":169,\"name\":\"蓋\",\"x\":1}],\"height\":2048}",
+  "texture": "8e1ba58d-b86b-4a6f-81d9-8cee9387265e",
+  "subMetas": {}
+}

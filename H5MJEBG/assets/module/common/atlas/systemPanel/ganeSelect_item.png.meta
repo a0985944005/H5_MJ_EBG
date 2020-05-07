@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "0c39ee59-c32d-4aaa-9f42-6aff31eb7b31",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "ganeSelect_item": {
+      "ver": "1.0.3",
+      "uuid": "eb215f66-e134-433a-97bc-640a51b4d43a",
+      "rawTextureUuid": "0c39ee59-c32d-4aaa-9f42-6aff31eb7b31",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 0.5,
+      "trimX": 2,
+      "trimY": 1,
+      "width": 325,
+      "height": 564,
+      "rawWidth": 328,
+      "rawHeight": 567,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

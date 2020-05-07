@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "b231afa8-08c6-441d-8ba7-264db9221faf",
+  "atlasJson": "{\"width\":512,\"SubTexture\":[{\"frameHeight\":326,\"y\":1,\"frameWidth\":305,\"frameX\":-2,\"width\":302,\"frameY\":0,\"height\":326,\"name\":\"KO (8)\",\"x\":1},{\"frameHeight\":164,\"y\":521,\"frameWidth\":128,\"frameX\":-2,\"width\":124,\"frameY\":-1,\"height\":161,\"name\":\"KO (2)\",\"x\":305},{\"width\":73,\"y\":403,\"height\":61,\"name\":\"KO (6)\",\"x\":348},{\"frameHeight\":163,\"y\":172,\"frameWidth\":124,\"frameX\":-4,\"width\":117,\"frameY\":-4,\"height\":156,\"name\":\"浮世繪2019-15\",\"x\":348},{\"frameHeight\":179,\"y\":1,\"frameWidth\":140,\"frameX\":-2,\"width\":138,\"frameY\":-8,\"height\":169,\"name\":\"浮世繪2019-16\",\"x\":305},{\"width\":345,\"y\":329,\"height\":190,\"name\":\"KO (4)\",\"x\":1},{\"width\":94,\"y\":330,\"height\":71,\"name\":\"KO (7)\",\"x\":348},{\"frameHeight\":85,\"y\":521,\"frameWidth\":305,\"frameX\":-2,\"width\":302,\"frameY\":0,\"height\":85,\"name\":\"KO (5)\",\"x\":1}],\"height\":1024,\"name\":\"pokerZJH\",\"imagePath\":\"pokerZJH_tex.png\"}",
+  "texture": "071bcd24-e290-4986-9b24-e322b56e1e2c",
+  "subMetas": {}
+}

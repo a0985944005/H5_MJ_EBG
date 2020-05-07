@@ -1,0 +1,6 @@
+{
+  "ver": "1.0.0",
+  "uuid": "8286602f-5fca-466b-a38e-b550a0ce8b3d",
+  "dragonBonesJson": "{\"armature\":[{\"aabb\":{\"width\":344,\"y\":-198.5720058954975,\"height\":360,\"x\":-172},\"skin\":[{\"name\":\"\",\"slot\":[{\"display\":[{\"path\":\"20190614遊戲大廳icon-21\",\"type\":\"image\",\"name\":\"20190614遊戲大廳icon-21\",\"transform\":{\"skY\":-0.0222,\"y\":-18.572,\"skX\":-0.0222}}],\"name\":\"20190614遊戲大廳icon-21\"}]}],\"type\":\"Armature\",\"name\":\"Armature\",\"animation\":[],\"bone\":[{\"name\":\"root\",\"transform\":{}}],\"slot\":[{\"name\":\"20190614遊戲大廳icon-21\",\"parent\":\"root\",\"color\":{}}],\"ik\":[],\"frameRate\":24,\"defaultActions\":[{\"gotoAndPlay\":\"\"}]}],\"frameRate\":24,\"name\":\"diceDRHHDS\",\"version\":\"5.5\",\"isGlobal\":0}",
+  "subMetas": {}
+}

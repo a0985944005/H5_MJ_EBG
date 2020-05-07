@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "656b9f64-b08e-4e11-a99a-3bb2ca170d40",
+  "atlasJson": "{\"imagePath\":\"diceFKDTCN_tex.png\",\"width\":512,\"height\":512,\"name\":\"diceFKDTCN\",\"SubTexture\":[{\"frameY\":-18,\"y\":1,\"frameWidth\":344,\"frameHeight\":360,\"width\":316,\"height\":342,\"name\":\"20190614遊戲大廳icon-22\",\"frameX\":-7,\"x\":1}]}",
+  "texture": "f1664e21-cdae-40a6-9c0e-1bcdd183edf5",
+  "subMetas": {}
+}

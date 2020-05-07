@@ -1,0 +1,255 @@
+{ 
+	"Version":"v0.0.3.2", 
+    "SERVER_HOST": "internal.gw.58poker.net", 
+    "SERVER_PORT": 3653, 
+    "SERVER_WSS":false,
+    "SERVER_LOGIN_TOPIC":"Login", 
+    "SERVER_HALL_TOPIC":"Hall",
+	"SERVER_GAME_TYPE": "MJEBG", 
+	"SERVER_GAME_NODEID": "MJEBG",
+	"SERVER_GUEST_CHANNEL": 0, 
+	"SERVER_MAX_CONNECTCOUNT":5,
+  
+    "GAME_LIST": {
+        "diceDTCN":     {"HerfName":"H5DiceDTCN", 		"SERVER_GAME_TYPE":"DiceDTCN",  "SERVER_GAME_ID":"DiceDTCN101"},
+        "diceHHDS":     {"HerfName":"H5DiceHHDS",  		"SERVER_GAME_TYPE":"DiceHHDS",  "SERVER_GAME_ID":"DiceHHDS101"},
+        "diceJDCN":     {"HerfName":"H5DiceJDCN",	 	"SERVER_GAME_TYPE":"DiceJDCN",  "SERVER_GAME_ID":"DiceJDCN101"},
+        "diceQZNN":     {"HerfName":"H5DiceQZNN",	 	"SERVER_GAME_TYPE":"DiceQZNN",  "SERVER_GAME_ID":"DiceQZNN101"},
+        "diceSH":       {"HerfName":"H5DiceSH", 	    "SERVER_GAME_TYPE":"DiceSH",    "SERVER_GAME_ID":"DiceSH101"},
+        "pokerDDZ":     {"HerfName":"H5PokerDDZ", 		"SERVER_GAME_TYPE":"PokerDDZ",  "SERVER_GAME_ID":"PokerDDZ101"},
+        "pokerDZPK":    {"HerfName":"H5PokerDZPK", 		"SERVER_GAME_TYPE":"PokerDZPK", "SERVER_GAME_ID":"PokerDZPK101"},
+        "pokerZJH":     {"HerfName":"H5PokerZJH", 		"SERVER_GAME_TYPE":"PokerZJH",  "SERVER_GAME_ID":"PokerZJH101"},
+        "diceBRNN":     {"HerfName":"", 			    "SERVER_GAME_TYPE":"DiceBRNN",  "SERVER_GAME_ID":""},
+        "diceDRHHDS":   {"HerfName":"", 			    "SERVER_GAME_TYPE":"DiceDRHHDS","SERVER_GAME_ID":""},
+        "diceFKDTCN":   {"HerfName":"", 			    "SERVER_GAME_TYPE":"DiceFKDTCN","SERVER_GAME_ID":""},
+        "mjEBG":        {"HerfName":"", 			    "SERVER_GAME_TYPE":"MJEBG",     "SERVER_GAME_ID":""},
+        "diceQZXFL":    {"HerfName":"", 			    "SERVER_GAME_TYPE":"DiceQZXFL", "SERVER_GAME_ID":""},
+        "diceDTXFL":    {"HerfName":"", 			    "SERVER_GAME_TYPE":"DiceDTXFL", "SERVER_GAME_ID":""},
+        "diceBRXFL":    {"HerfName":"", 			    "SERVER_GAME_TYPE":"DiceBRXFL", "SERVER_GAME_ID":""}
+	}, 
+	    
+	"NETWORK_BACKHALL_TIMER":100,
+	"CREATE_AI_ENABLE":1,
+	"CREATE_AI_TIMER":10000,
+	"LOGIN_TIMEOUT" : 15000,
+ 
+    "PRELOAD_SCENE_LIST": {
+		"loginMain":["antesPlaceMain","gameMain"],
+		"antesPlaceMain":"gameMain",
+		"gameMain":"antesPlaceMain"
+    },
+
+	"SYSTEM_SETTING":{
+		"Language":false,
+        "DebugMode":true
+	},
+
+	"SITE_SETTING": {
+		"NowSite":"EnableHall",
+		"GT": {
+            "Logo":"Old",
+			"AntesPlace_BtnBackHall_Enable" : false,
+			"AntesPlace_Tips":true,
+			"AntesPlace_First":true,
+			"Game_BtnBackHall_ToBowan": false,
+			"NonProject_RejoinToEndWindow": false
+		},
+		"DisableHall": {
+            "Logo":"New",
+			"AntesPlace_BtnBackHall_Enable" : false,
+			"AntesPlace_Tips":true,
+			"AntesPlace_First":true,
+			"Game_BtnBackHall_ToBowan": false,
+			"NonProject_RejoinToEndWindow": true
+		},
+		"EnableHall": {
+            "Logo":"New",
+			"AntesPlace_BtnBackHall_Enable" : true,
+			"AntesPlace_Tips":false,
+			"AntesPlace_First":false,
+			"Game_BtnBackHall_ToBowan": false,
+			"NonProject_RejoinToEndWindow": true
+		},
+		"OnlyGame": {
+            "Logo":"New",
+			"AntesPlace_BtnBackHall_Enable" : false,
+			"AntesPlace_Tips":false,
+			"AntesPlace_First":false,
+			"Game_BtnBackHall_ToBowan": true,
+			"NonProject_RejoinToEndWindow": true
+		}
+	},
+	
+	"ERRORTRACKING_SETTING": {  
+		"Enable":1,
+		"NowSite":"fundebug",
+		"SiteList": {
+			"0":"fundebug",
+			"1":"sentry"
+		}
+	},
+
+
+	"StateMachine":{
+		"TT":				  ["TableInfo","StartBidding","SomeoneBidding","BiddingResult","StartBetting","SomeoneBetting","RollingToDealResult","TurnInfo","OnSettlement","TT"],
+		"ReJoin":			  ["TableInfo","StartBidding","SomeoneBidding","BiddingResult","StartBetting","SomeoneBetting","RollingToDealResult","TurnInfo","OnSettlement","TT"],
+		"Start":			  ["TableInfo","TT"],
+		"TableInfo" : 		  ["StartBidding","TT"],
+		"StartBidding":		  ["SomeoneBidding","TT"],
+		"SomeoneBidding":	  ["BiddingResult","SomeoneBidding","TT"],
+		"BiddingResult" : 	  ["StartBetting","TT"],
+		"StartBetting" : 	  ["SomeoneBetting","TT"],
+		"SomeoneBetting":	  ["RollingToDealResult","SomeoneBetting","TT"],
+		"RollingToDealResult":["TurnInfo","TT"],
+		"TurnInfo" : 		  ["StartBidding","OnSettlement","TT"],
+		"OnSettlement":		  ["End","TT"]
+	},
+
+	"GameMain":{
+		"UserBox":{
+			"ReciprocalScheduleTime":0.1,
+			"ReciprocalScheduleCount":10,
+			"PlayerTotalCount":4,
+			"PlayerOtherCount":3,
+			"PlayerSelfSitDown":-1,
+			"PlayOtherPosi":{
+				"0":{"ThisPosi": {"PosiX":830,		"PosiY":-20}},
+				"1":{"ThisPosi": {"PosiX":-150,		"PosiY":360}},
+				"2":{"ThisPosi": {"PosiX":-830,		"PosiY":-20}},
+				"3":{"ThisPosi": {"PosiX":0,		"PosiY":0}},
+				"4":{"ThisPosi": {"PosiX":0,		"PosiY":0}}
+			},
+			"TopBidDice":5
+		},
+		"StartGameAnim":{
+			"OriginalScale":0.01,
+			"Scale01":{"sAnimTime":0.5,	"sTo":1},
+			"Scale02":{"sAnimTime":0.1,	"sTo":1.1},
+			"MoveToX":637,
+			"MoveToTime":0.6,
+			"DelayTime":1.2,
+			"FadeIn":0.1,
+			"FadeOut":1
+		},
+		
+		"DiceCupAnim":{
+			"Start":{
+				"AnimTime":0.1,
+				"RotateLeft":25,
+				"RotateRight":-25
+			},
+			"End": {
+				"AnimTime":0.1,
+				"Rotate":0
+			}
+		},
+		
+		"DiceBoom":{
+			"TotalDelayTime":1.3,
+			"OnesDelayTime":0.3,
+			"BoomTime":0.1,
+			"BoomCount":5
+		},
+		"MsgFade":{
+			"FadeIn":0.5,
+			"DelayTimes":1,
+			"FadeOut":0.5
+		},
+			
+		"MsgOut":{
+			"ScaleStartAnim":2.5,
+			"ScaleEndAnim":1,
+			"ScaleAnimTime":0.3,
+			"ChipAnimTime":0.3,
+			"CoinAnimTime":0.2 
+		},
+
+		"ChipAnim": {"AnimTime":0.5},
+		"CoinAnim": {"AnimTime":0.5,"MoveByPosiY": 100},
+		"SettlementMsg":{
+			"SinglePosi":{
+				"label1PosiX":3,
+				"label2PosiX":67.5
+			},
+			"DoublePosi":{
+				"label1PosiX":-20,
+				"label2PosiX":92
+			},
+			"ScaleStartAnim":2.5,
+			"ScaleEndAnim":1.5,
+			"ScaleAnimTime":0.5
+		},
+
+
+		"WinLoseAnim":{	
+			"OriginalScale":0.01,
+			"Scale01":{"sAnimTime":0.5,	"sTo":1},
+			"Scale02":{"sAnimTime":0.1,	"sTo":1.1},
+			"MoveToX":440,
+			"MoveToTime":0.6,
+			"DelayTime":2.4,
+			"FadeIn":0.1,
+			"FadeOut":1},
+		"TableAutoTime":3,
+		"NoCoinBackHallTime": 3,
+
+
+		"MJset":{
+			"MJ_ShareNum":4,
+			"MJ_table":{
+				"0":{"ThisPosi": {"PosiX":-450,		"PosiY":  0}},
+				"1":{"ThisPosi": {"PosiX":-150,		"PosiY":  0}},
+				"2":{"ThisPosi": {"PosiX": 150,		"PosiY":  0}},
+				"3":{"ThisPosi": {"PosiX": 450,		"PosiY":  0}}
+			},
+			"MJ_user":{
+				"0":{"ThisPosi": {"PosiX":580,		"PosiY":-20}},
+				"1":{"ThisPosi": {"PosiX":120,		"PosiY":300}},
+				"2":{"ThisPosi": {"PosiX":-580,		"PosiY":-20}},
+				"3":{"ThisPosi": {"PosiX":120,		"PosiY":-300}}
+			}
+		}
+
+	},
+
+	"SystemPanel": {
+        "Marquee":{
+            "MoveTime": 15
+        },
+		"WindowAnim":{
+			"OriginalScale":0.1,
+			"EaseSineOut":2.0,
+			"Scale01":{"sAnimTime":0.2,	"sTo":1.1},
+			"Scale02":{"sAnimTime":0.05,"sTo":1},
+			"ScaleClose":{"sAnimTime":0.2,"sTo":0.1}
+		}
+	}, 
+    "SystemLabelAD":{
+		"MaxStrIndex": 3,
+		"Timer":3
+	},
+	"EmojiAnim":{
+		"AnimTotalTime":2,
+		"ScheduleTime":0.06,
+		"MiniPicCount":1,
+		"MaxiPicCount":5,
+		"-1":	{	"StringPic":	"right",
+					"StringPosi":	{"PosiX":20, 	"PosiY": 120},
+					"IconPosi":		{"PosiX":75, 	"PosiY": 100}},
+		"0":	{	"StringPic":	"right",
+					"StringPosi":	{"PosiX":110, 	"PosiY": 50},
+					"IconPosi":		{"PosiX":-100, 	"PosiY": -140}},
+		"1":	{	"StringPic":	"right",
+					"StringPosi":	{"PosiX":110, 	"PosiY": 50},
+					"IconPosi":		{"PosiX":-100, 	"PosiY": -140}},
+		"2":	{	"StringPic":	"right",
+					"StringPosi":	{"PosiX":110, 	"PosiY": 50},
+					"IconPosi":		{"PosiX":-100, 	"PosiY": -140}},
+		"3":	{	"StringPic":	"right",
+					"StringPosi":	{"PosiX":110, 	"PosiY": 50},
+					"IconPosi":		{"PosiX":-100, 	"PosiY": -140}},
+		"4":	{	"StringPic":	"right",
+					"StringPosi":	{"PosiX":110, 	"PosiY": 50},
+					"IconPosi":		{"PosiX":-100, 	"PosiY": -140}}
+	}
+}

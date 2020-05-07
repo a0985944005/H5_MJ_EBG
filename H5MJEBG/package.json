@@ -1,0 +1,18 @@
+{
+  "name": "web-mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cocos2d-js-min.813a0.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-file-inline": "^1.3.7",
+    "gulp-gzip": "^1.4.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-sequence": "^1.0.0"
+  }
+}
